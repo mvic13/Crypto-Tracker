@@ -5,7 +5,15 @@
     border-bottom: 20px solid midnightblue;
     background-color: white;
   }
+
   body{
     background-color: white;
   }
 
+.finage-ticker-tape-item {
+  max-width: 60%;
+}
+
+.finage-ticker-item {
+  max-width: 60%;
+}
