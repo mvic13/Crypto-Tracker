@@ -10,4 +10,7 @@
     background-color: white;
   }
 
-
+  .containerbar{
+    align-items: center;
+    width: 100;
+    }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,46 +9,69 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
 </head>
+
 <body>
     <!-- Header -->
-<header class="jumbotron">
-	<h1 class="display-12">Title</h1>
-	<p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit accusamus corrupti omnis optio architecto sapiente obcaecati sunt at facilis ullam, velit eius aspernatur repellendus dolor dolorem nihil est? Temporibus, fugiat?</p>
-	<p id="currentDay" class="lead"></p>
-</header>
+    <header class="jumbotron">
+        <h1 class="display-12">Title</h1>
+        <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit accusamus corrupti omnis optio
+            architecto sapiente obcaecati sunt at facilis ullam, velit eius aspernatur repellendus dolor dolorem nihil
+            est? Temporibus, fugiat?</p>
+        <p id="currentDay" class="lead"></p>
+    </header>
+    <nav class="navbar navbar-light bg-light">
+        <div class=" flex-direction-flex justify-content-center">
+            <form class="form-inline style padding 20px ">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
 
-<div class="container">
-     <div class="row">
-     <div class="col-lg">
-      One of three columns
-     <div class="graph1">
-     <div  id="chart1"></div>
-      <p class="chart-one"> chart one </p>
-</div>
-</div>
-    <div class="col-lg">
-     One of three columns
-     <div class="graph2">
-     <div  id="chart2"></div>
-      <p class="chart-two"> chart two </p>
-</div>
-</div>
-     <div class="col-lg">
-      One of three columns
-     <div class="graph3">
-     <div  id="chart3"></div>
-     <p class="chart-three"> chart three </p>
-     </div>
-</div>
-</div>
-      
+    <div class="container">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    candlestick1
+                    <div class="stick1">
+                        <div id="candlestick1"></div>
+                        <p class="candle1"> chart One </p>
+                    </div>
+                </div>
+                <div class="col-md">
+                    candlestick2
+                    <div class="stick2">
+                        <div id="candlestick2"></div>
+                        <p class="candle2"> chart Two </p>
+                    </div>
+                </div>
+                <div class="col-md">
+                    candlestick3
+                    <div class="stick3">
+                        <div id="candlestick3"></div>
+                        <p class="candle3"> chart three </p>
+                    </div>
+                </div>
+                <div class="col-md">
+                    candlestick4
+                    <div class="stick4">
+                        <div id="candlestick4"></div>
+                        <p class="candle4"> chart Two </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 <br>
 
 <footer>
     <div id="NationalDebtCard">
         <h1><a href="https://www.usdebtclock.org/">National Debt</a></h1>
-        <p id="CurrentDebt" >CurrentDebt </p>
+        <p id="CurrentDebt">CurrentDebt </p>
 
     </div>
 
@@ -55,4 +79,5 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="logic.js"></script>
 <script src="assets/js/API.js"></script>
+
 </html>
