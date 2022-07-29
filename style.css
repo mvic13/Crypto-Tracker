@@ -1,16 +1,24 @@
 .jumbotron {
-    text-align: center;
-    color:black;
-    border-radius: 0;
-    border-bottom: 20px solid midnightblue;
-    background-color: white;
-  }
+  text-align: center;
+  color: black;
+  border-radius: 0;
+  border-bottom: 20px solid midnightblue;
+  background-color: white;
+}
 
-  body{
-    background-color: white;
-  }
+body {
+  background-color: white;
+}
 
-  .containerbar{
-    align-items: center;
-    width: 100;
-    }
+.containerbar {
+  align-items: center;
+  width: 100;
+}
+
+.finage-ticker-tape-item {
+  max-width: 60%;
+}
+
+.finage-ticker-item {
+  max-width: 60%;
+}
