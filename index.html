@@ -18,6 +18,25 @@
             architecto sapiente obcaecati sunt at facilis ullam, velit eius aspernatur repellendus dolor dolorem nihil
             est? Temporibus, fugiat?</p>
         <p id="currentDay" class="lead"></p>
+        <div class="finage-ticker-tape-item"> </div>
+        <script type="text/javascript" src="https://cdn.finage.co.uk/ticker-tape/main.js">
+        </script>
+        <script>
+            finageTickerTape.symbols(["btcusd:crypto", "ETHUSD:crypto", "LTCUSD:crypto",]);
+            finageTickerTape.colors(["", ""]);  //background color, text color
+            finageTickerTape.theme(["pearl-white"]); //pearl-white, midnight, dark-night
+            finageTickerTape.initWidget();
+        </script>
+        <div class="finage-ticker-item"> </div>
+        <script type="text/javascript" src="https://cdn.finage.co.uk/ticker/main.js">
+        </script>
+        <script>
+            finageTicker.symbols(["SPY", "QQQ", "TSLA",]);
+            finageTicker.colors(["", ""]);  //background color, text color
+            finageTicker.theme(["pearl-white"]); //pearl-white, midnight, dark-night
+            finageTicker.initWidget();
+        </script>
+    </header>
     </header>
     <nav class="navbar navbar-light bg-light">
         <div class=" flex-direction-flex justify-content-center">
