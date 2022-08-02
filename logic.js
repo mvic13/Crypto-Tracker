@@ -100,7 +100,3 @@ var options = {
 
   var chart = new ApexCharts(document.querySelector("#candlestick4"), options);
 chart.render();  
-
-
-
-  

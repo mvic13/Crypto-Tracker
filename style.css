@@ -1,12 +1,12 @@
-.jumbotron {
-  text-align: center;
-  color: black;
-  border-radius: 0;
-  border-bottom: 20px solid midnightblue;
+body {
   background-color: white;
 }
 
-body {
+.jumbotron {
+  text-align: center;
+  color: black;
+  /* border-radius: 0;
+  border-bottom: 20px solid midnightblue; */
   background-color: white;
 }
 
@@ -21,4 +21,34 @@ body {
 
 .finage-ticker-item {
   max-width: 60%;
+}
+
+.dowbox {
+  display: flex;
+  justify-content: center;
+  
+}
+
+#dowjones {
+  align-content: center;
+  width: 60%;
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #fefefe, #fcfcfc, #fbfbfb, #f8f8f8, #f4f4f4, #f1f1f1, #eeeeee);
+
+  /* border-width: 1px;
+  border-color: black;
+  border-style: solid; */
+}
+
+#djisymbol{
+  font-size: 23px;
+  margin: 0;
+}
+
+#djiprice {
+  font-size: 23px;
+  margin: 0;
+}
+
+#djitime{
+
 }
