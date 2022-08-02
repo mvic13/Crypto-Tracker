@@ -49,6 +49,15 @@ body {
   margin: 0;
 }
 
-#djitime{
+#title {
+  display: flex;
+  justify-content: center;
+  
+}
+
+#CurrentDebt {
+ display: flex;
+ justify-content: center;
+ font-size: 23px;
 
 }
