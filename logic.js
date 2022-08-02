@@ -17,122 +17,123 @@ button.addEventListener('click', (event) => {
   console.log(symbol)
   fetch("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=" + symbol + "&interval=5min&apikey=6LT2XMVTOVBKRMI4")
     .then(data => data.json())
-    .then(data => console.log(data))
+    .then(data => {
+      console.log(data)
+      var indtraday = document.getElementById("timeinterval")
+      indtraday.innerHTML = "symbol : " + data["Meta Data"]["2. Symbol"]
 
-  var indtraday = document.getElementById("timeinterval")
-  timeinterval.innerHTML = "timeinterval" + data.main.timeinterval
-  var indtraday = data;
-  console.log(data)
-  timeinterval.innerHTML = indtraday
+    })
+
+
 
 })
 
 
 
 
-// var options = {
+var options = {
 
-//   chart: {
-//     height: "500px",
-//     width: "500px",
-//     type: "candlestick",
-//   },
-//   series: [{
-//     data: [{
-//       x: new Date(2020, 01, 01),
-//       y: [51.98, 56.29, 51.59, 53.85]
-//     },
-//     {
-//       x: new Date(2020, 02, 01),
-//       y: [53.66, 54.99, 51.35, 52.95]
-//     },
-//     {
-//       x: new Date(2020, 08, 01),
-//       y: [52.76, 57.35, 52.15, 57.03]
-//     }]
-//   }],
-// };
+  chart: {
+    height: "500px",
+    width: "500px",
+    type: "candlestick",
+  },
+  series: [{
+    data: [{
+      x: new Date(2020, 01, 01),
+      y: [51.98, 56.29, 51.59, 53.85]
+    },
+    {
+      x: new Date(2020, 02, 01),
+      y: [53.66, 54.99, 51.35, 52.95]
+    },
+    {
+      x: new Date(2020, 08, 01),
+      y: [52.76, 57.35, 52.15, 57.03]
+    }]
+  }],
+};
 
-// var chart = new ApexCharts(document.querySelector("#candlestick1"), options);
-// chart.render();
+var chart = new ApexCharts(document.querySelector("#candlestick1"), options);
+chart.render();
 
-// var options = {
+var options = {
 
-//   chart: {
-//     height: "500px",
-//     width: "500px",
-//     type: "candlestick",
-//   },
-//   series: [{
-//     data: [{
-//       x: new Date(2020, 01, 01),
-//       y: [51.98, 56.29, 51.59, 53.85]
-//     },
-//     {
-//       x: new Date(2020, 02, 01),
-//       y: [53.66, 54.99, 51.35, 52.95]
-//     },
-//     {
-//       x: new Date(2020, 08, 01),
-//       y: [52.76, 57.35, 52.15, 57.03]
-//     }]
-//   }],
-// };
+  chart: {
+    height: "500px",
+    width: "500px",
+    type: "candlestick",
+  },
+  series: [{
+    data: [{
+      x: new Date(2020, 01, 01),
+      y: [51.98, 56.29, 51.59, 53.85]
+    },
+    {
+      x: new Date(2020, 02, 01),
+      y: [53.66, 54.99, 51.35, 52.95]
+    },
+    {
+      x: new Date(2020, 08, 01),
+      y: [52.76, 57.35, 52.15, 57.03]
+    }]
+  }],
+};
 
-// var chart = new ApexCharts(document.querySelector("#candlestick2"), options);
-// chart.render();
+var chart = new ApexCharts(document.querySelector("#candlestick2"), options);
+chart.render();
 
-// var options = {
+var options = {
 
-//   chart: {
-//     height: "500px",
-//     width: "500px",
-//     type: "candlestick",
-//   },
-//   series: [{
-//     data: [{
-//       x: new Date(2020, 01, 01),
-//       y: [51.98, 56.29, 51.59, 53.85]
-//     },
-//     {
-//       x: new Date(2020, 02, 01),
-//       y: [53.66, 54.99, 51.35, 52.95]
-//     },
-//     {
-//       x: new Date(2020, 08, 01),
-//       y: [52.76, 57.35, 52.15, 57.03]
-//     }]
-//   }],
-// };
+  chart: {
+    height: "500px",
+    width: "500px",
+    type: "candlestick",
+  },
+  series: [{
+    data: [{
+      x: new Date(2020, 01, 01),
+      y: [51.98, 56.29, 51.59, 53.85]
+    },
+    {
+      x: new Date(2020, 02, 01),
+      y: [53.66, 54.99, 51.35, 52.95]
+    },
+    {
+      x: new Date(2020, 08, 01),
+      y: [52.76, 57.35, 52.15, 57.03]
+    }]
+  }],
+};
 
-// var chart = new ApexCharts(document.querySelector("#candlestick3"), options);
-// chart.render();
+var chart = new ApexCharts(document.querySelector("#candlestick3"), options);
+chart.render();
 
-// var options = {
+var options = {
 
-//   chart: {
-//     height: "500px",
-//     width: "500px",
-//     type: "candlestick",
-//   },
-//   series: [{
-//     data: [{
-//       x: new Date(2020, 01, 01),
-//       y: [51.98, 56.29, 51.59, 53.85]
-//     },
-//     {
-//       x: new Date(2020, 02, 01),
-//       y: [53.66, 54.99, 51.35, 52.95]
-//     },
-//     {
-//       x: new Date(2020, 08, 01),
-//       y: [52.76, 57.35, 52.15, 57.03]
-//     }]
-//   }],
-// };
+  chart: {
+    height: "500px",
+    width: "500px",
+    type: "candlestick",
+  },
+  series: [{
+    data: [{
+      x: new Date(2020, 01, 01),
+      y: [51.98, 56.29, 51.59, 53.85]
+    },
+    {
+      x: new Date(2020, 02, 01),
+      y: [53.66, 54.99, 51.35, 52.95]
+    },
+    {
+      x: new Date(2020, 08, 01),
+      y: [52.76, 57.35, 52.15, 57.03]
+    }]
+  }],
+};
 
-// var chart = new ApexCharts(document.querySelector("#candlestick4"), options);
-// chart.render();
+var chart = new ApexCharts(document.querySelector("#candlestick4"), options);
+chart.render();
 
 
 
