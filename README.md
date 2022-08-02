@@ -1,1 +1,3 @@
 # Crypto-Tracker
+
+The stock market has been around for many years. In this day and age the stock market has changed drastically with the addition of Crypto Currencies. With this new way of digitally exchanging currency we must keep up to date and follow the trends that can change in seconds. With this in mind our team from Kansas University have created a web page that displays our current stock market and the crypto currencies that have the best potential in growth. 
