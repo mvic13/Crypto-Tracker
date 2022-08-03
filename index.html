@@ -50,13 +50,17 @@
             </section>
         </section>
     </header>
-    
-    <nav class="navbar navbar-light bg-light">
-        <div class=" flex-direction-flex justify-content-center">
-            <form class="form-inline style padding 20px ">
-                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button id="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+
+    <nav>
+        <div id="company_container">
+            <select id="companies" class="btn btn-light" name="companies">
+                <option value="AAPL">Apple Inc(AAPL)</option>
+                <option value="MSFT">Microsoft Corp(MSFT)</option>
+                <option value="IBM">International Business Machine(IBM)</option>
+            </select>
+            <button id="get_data" class="btn btn-primary">Get Data</button>
+        </div>
+        </form>
         </div>
     </nav>
 
@@ -108,6 +112,6 @@
 <script src="logic.js"></script>
 <script src="assets/js/localstorage.js"></script>
 <script src="assets/js/API.js"></script>
-<script src ="assets/js/finage.js"></script>
+<script src="assets/js/finage.js"></script>
 
 </html>
