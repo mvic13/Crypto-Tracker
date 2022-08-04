@@ -1,128 +1,68 @@
-var APIKey = "6LT2XMVTOVBKRMI4"
+const APIKey = "6LT2XMVTOVBKRMI4"
+const interval = "5min";
+var APIURL = "https://www.alphavantage.co/query?apikey=6LT2XMVTOVBKRMI4&function=TIME_SERIES_MONTHLY_ADJUSTED&datatype=json";
+
+var timeSeries = [];
+
 var button = document.getElementById("get_data")
-var URL = "https://www.alphavantage.co/query?apikey=6LT2XMVTOVBKRMI4&function=TIME_SERIES_MONTHLY_ADJUSTED&datatype=json&symbol=";
-function url() {
-  return fetch(url)
-    .then(response => response.json())
-    .then(data => formatData(data))
-};
-var info = document.getElementById("timeinterval")
-var apiKey = "6LT2XMVTOVBKRMI4"
 button.addEventListener('click', (event) => {
   event.preventDefault()
-  var input = document.getElementById("companies")
-  var symbol = input.value
-  console.log(symbol)
-  fetch("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=" + symbol + "&interval=5min&apikey=6LT2XMVTOVBKRMI4")
-    .then(data => data.json())
-    .then(data => {
-      console.log(data)
-      var indtraday = document.getElementById("timeinterval")
-      indtraday.innerHTML = "symbol : " + data["Meta Data"]["2. Symbol"]
-
-    })
+  var input = document.getElementById("companies");
+  var symbol = input.value;
+  var indtraday = document.getElementById("timeinterval")
+  indtraday.innerHTML = `Symbol: ${symbol}`;
+  GetData(symbol);
 })
 
-var options = {
+function GetData(symbol, chart) {
+  var url = `${APIURL}&symbol=${symbol}&interval=${interval}&apikey=${APIKey}`;
+  fetch(url)
+    .then(data => data.json())
+    .then(data => {
+      var series = data["Monthly Adjusted Time Series"];
+      var keys = Object.keys(series);
 
-  chart: {
-    height: "500px",
-    width: "500px",
-    type: "candlestick",
-  },
-  series: [{
-    data: [{
-      x: new Date(2020, 01, 01),
-      y: [51.98, 56.29, 51.59, 53.85]
-    },
-    {
-      x: new Date(2020, 02, 01),
-      y: [53.66, 54.99, 51.35, 52.95]
-    },
-    {
-      x: new Date(2020, 08, 01),
-      y: [52.76, 57.35, 52.15, 57.03]
-    }]
-  }],
-};
+      timeSeries = [];
 
-var chart = new ApexCharts(document.querySelector("#candlestick1"), options);
-chart.render();
+      for (var indx = 0; indx < keys.length; indx++) {
+        var x = keys[indx];
+        var current = series[keys[indx]];
+        var y = [current["1. open"], current["2. high"], current["3. low"], current["4. close"]];
+
+        timeSeries.push({ x, y });
+      }
+      chart.updateSeries([{ data: timeSeries.reverse() }], true);
+      console.log(timeSeries);
+    })
+}
 
 var options = {
 
   chart: {
     height: "500px",
     width: "500px",
-    type: "candlestick",
+    type: "candlestick"
   },
   series: [{
-    data: [{
-      x: new Date(2020, 01, 01),
-      y: [51.98, 56.29, 51.59, 53.85]
-    },
-    {
-      x: new Date(2020, 02, 01),
-      y: [53.66, 54.99, 51.35, 52.95]
-    },
-    {
-      x: new Date(2020, 08, 01),
-      y: [52.76, 57.35, 52.15, 57.03]
-    }]
+    data: []
   }],
 };
 
-var chart = new ApexCharts(document.querySelector("#candlestick2"), options);
-chart.render();
+var chart_1 = new ApexCharts(document.querySelector("#candlestick1"), options);
+chart_1.render();
 
-var options = {
+var chart_2 = new ApexCharts(document.querySelector("#candlestick2"), options);
+chart_2.render();
 
-  chart: {
-    height: "500px",
-    width: "500px",
-    type: "candlestick",
-  },
-  series: [{
-    data: [{
-      x: new Date(2020, 01, 01),
-      y: [51.98, 56.29, 51.59, 53.85]
-    },
-    {
-      x: new Date(2020, 02, 01),
-      y: [53.66, 54.99, 51.35, 52.95]
-    },
-    {
-      x: new Date(2020, 08, 01),
-      y: [52.76, 57.35, 52.15, 57.03]
-    }]
-  }],
-};
+var chart_3 = new ApexCharts(document.querySelector("#candlestick3"), options);
+chart_3.render();
 
-var chart = new ApexCharts(document.querySelector("#candlestick3"), options);
-chart.render();
+var chart_4 = new ApexCharts(document.querySelector("#candlestick4"), options);
+chart_4.render();
 
-var options = {
+GetData("AAPL", chart_1);
+GetData("MSFT", chart_2);
+GetData("IBM", chart_3);
+GetData("TSLA", chart_4);
 
-  chart: {
-    height: "500px",
-    width: "500px",
-    type: "candlestick",
-  },
-  series: [{
-    data: [{
-      x: new Date(2020, 01, 01),
-      y: [51.98, 56.29, 51.59, 53.85]
-    },
-    {
-      x: new Date(2020, 02, 01),
-      y: [53.66, 54.99, 51.35, 52.95]
-    },
-    {
-      x: new Date(2020, 08, 01),
-      y: [52.76, 57.35, 52.15, 57.03]
-    }]
-  }],
-};
 
-var chart = new ApexCharts(document.querySelector("#candlestick4"), options);
-chart.render();  
