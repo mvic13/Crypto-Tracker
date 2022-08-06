@@ -51,7 +51,16 @@
         </section>
     </header>
 
-    <nav>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" style="color:white ;">Stocks/Crypto</a>
+        <form class="form-inline">
+            <input id="searchBar" class="" type="search" placeholder="Search" aria-label="Search">
+            <button id="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+    </nav>
+
+    <!-- <nav>
         <div id="company_container">
             <select id="companies" class="btn btn-light" name="companies">
                 <option value="AAPL">Apple Inc(AAPL)</option>
@@ -62,8 +71,8 @@
         </div>
         </form>
         </div>
-    </nav>
-    <div class="container">
+    </nav> -->
+    <div class="Timecontainer">
         <div class="">
             <h1 id="timeinterval"></h1>
             <p id="sy"></p>
@@ -73,35 +82,36 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md">
-                <div class="stick1">
-                    <div id="candlestick1"></div>
-                    <p class="candle1"> chart One </p>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">chart One
+                    <div class="stick1">
+                        <div id="candlestick1"></div>
+                        <p class="candle1"></p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md">
-                <div class="stick2">
-                    <div id="candlestick2"></div>
-                    <p class="candle2"> chart Two </p>
+                <div class="col-md">chart Two
+                    <div class="stick2">
+                        <div id="candlestick2"></div>
+                        <p class="candle2"></p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md">
-                <div class="stick3">
-                    <div id="candlestick3"></div>
-                    <p class="candle3"> chart three </p>
+                <div class="col-md">chart three
+                    <div class="stick3">
+                        <div id="candlestick3"></div>
+                        <p class="candle3"></p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md">
-                <div class="stick4">
-                    <div id="candlestick4"></div>
-                    <p class="candle4"> chart Two </p>
+                <div class="col-md">chart four
+                    <div class="stick4">
+                        <div id="candlestick4"></div>
+                        <p class="candle4"></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    </section>
 
 </body>
 <br>
