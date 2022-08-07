@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,14 +8,12 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
 </head>
-
 <body>
     <!-- Header -->
     <header class="jumbotron">
         <h1 class="display-12">QuickStocks</h1>
         <p class="lead"></p>
         <p id="currentDay" class="lead"></p>
-
         <section class="boxcontainer">
             <!-- Ticker Tape Widget -->
             <div class="finage-ticker-tape-item"> </div>
@@ -28,7 +25,6 @@
                 finageTickerTape.theme(["pearl-white"]); //pearl-white, midnight, dark-night
                 finageTickerTape.initWidget();
             </script>
-
             <!-- Ticker Box Widet -->
             <div class="finage-ticker-item"> </div>
             <script type="text/javascript" src="https://cdn.finage.co.uk/ticker/main.js">
@@ -39,7 +35,6 @@
                 finageTicker.theme(["pearl-white"]); //pearl-white, midnight, dark-night
                 finageTicker.initWidget();
             </script>
-
             <!-- Dow Jones Ticker Box -->
             <section class="dowbox">
                 <div id="dowjones">
@@ -50,20 +45,9 @@
             </section>
         </section>
     </header>
-
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" style="color:white ;">Stocks/Crypto</a>
-        <form class="form-inline">
-            <input id="searchBar" class="" type="search" placeholder="Search" aria-label="Search">
-            <button id="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-
-    </nav>
-
-    <!-- <nav>
+    <nav>
         <div id="company_container">
             <select id="companies" class="btn btn-light" name="companies">
-
                 <option value="AAPL">Apple Inc (AAPL)</option>
                 <option value="MSFT">Microsoft Corp (MSFT)</option>
                 <option value="IBM">International Business Machine (IBM)</option>
@@ -73,66 +57,49 @@
         </div>
         </form>
         </div>
-    </nav> -->
-    <div class="Timecontainer">
-        <div class="">
-            <h1 id="timeinterval"></h1>
-            <p id="sy"></p>
-            <p id=""></p>
-            <p id=""></p>
-            <p id=""></p>
-        </div>
-    </div>
-
-    <section>
+    </nav>
+    <div class="container">
         <div class="container">
             <div class="row">
-                <div class="col-md">chart One
+                <div class="col-md">
                     <div class="stick1">
                         <p class="candle1"> Hourly </p>
                         <div id="candlestick1"></div>
-
+                       
                     </div>
                 </div>
-                <div class="col-md">chart Two
+                <div class="col-md">
                     <div class="stick2">
                         <p class="candle2"> Daily </p>
                         <div id="candlestick2"></div>
-                        
                     </div>
                 </div>
-                <div class="col-md">chart three
+                <div class="col-md">
                     <div class="stick3">
                         <p class="candle3"> Weekly </p>
                         <div id="candlestick3"></div>
-
                     </div>
                 </div>
-                <div class="col-md">chart four
+                <div class="col-md">
                     <div class="stick4">
                         <p class="candle4"> Monthly </p>
                         <div id="candlestick4"></div>
-
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
 </body>
 <br>
-
 <footer>
     <div id="NationalDebtCard">
         <h1 id="title"><a href="https://www.usdebtclock.org/">National Debt</a></h1>
         <p id="CurrentDebt">CurrentDebt </p>
     </div>
-
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="logic.js"></script>
 <script src="assets/js/localstorage.js"></script>
 <script src="assets/js/API.js"></script>
 <script src="assets/js/finage.js"></script>
-
 </html>
