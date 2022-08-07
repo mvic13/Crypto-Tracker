@@ -51,7 +51,16 @@
         </section>
     </header>
 
-    <nav>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" style="color:white ;">Stocks/Crypto</a>
+        <form class="form-inline">
+            <input id="searchBar" class="" type="search" placeholder="Search" aria-label="Search">
+            <button id="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+    </nav>
+
+    <!-- <nav>
         <div id="company_container">
             <select id="companies" class="btn btn-light" name="companies">
 
@@ -64,41 +73,51 @@
         </div>
         </form>
         </div>
-    </nav>
+    </nav> -->
+    <div class="Timecontainer">
+        <div class="">
+            <h1 id="timeinterval"></h1>
+            <p id="sy"></p>
+            <p id=""></p>
+            <p id=""></p>
+            <p id=""></p>
+        </div>
+    </div>
 
-    <div class="container">
-
-
+    <section>
         <div class="container">
             <div class="row">
-                <div class="col-md">
+                <div class="col-md">chart One
                     <div class="stick1">
                         <p class="candle1"> Hourly </p>
                         <div id="candlestick1"></div>
-                       
+
                     </div>
                 </div>
-                <div class="col-md">
+                <div class="col-md">chart Two
                     <div class="stick2">
                         <p class="candle2"> Daily </p>
                         <div id="candlestick2"></div>
+                        
                     </div>
                 </div>
-                <div class="col-md">
+                <div class="col-md">chart three
                     <div class="stick3">
                         <p class="candle3"> Weekly </p>
                         <div id="candlestick3"></div>
+
                     </div>
                 </div>
-                <div class="col-md">
+                <div class="col-md">chart four
                     <div class="stick4">
                         <p class="candle4"> Monthly </p>
                         <div id="candlestick4"></div>
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 </body>
 <br>
@@ -107,7 +126,6 @@
     <div id="NationalDebtCard">
         <h1 id="title"><a href="https://www.usdebtclock.org/">National Debt</a></h1>
         <p id="CurrentDebt">CurrentDebt </p>
-
     </div>
 
 </footer>

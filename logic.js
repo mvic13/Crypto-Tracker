@@ -59,4 +59,19 @@ function convertToChartData(apiData) {
       apiData[key]["4. close"]]
     })
   }
+  
 chartData.reverse()
+
+  const chartOptions = {
+
+    chart: {
+      height: "500px",
+      width: "500px",
+      type: "candlestick",
+    },
+    series: [{
+      data: chartData
+    }],
+  };
+  return chartOptions
+}
