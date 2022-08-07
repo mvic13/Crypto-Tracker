@@ -1,7 +1,9 @@
-var searchInputElm = document.querySelector("#searchinput");
+var searchInputElm = document.querySelector("#search");
 var btnSearchElm = document.querySelector("#btnSearch");
 
-var Search = [];
+
 
 function renderSearch() {
+    var symbol = JSON.parse(localStorage.getitem(input))
+    
 }

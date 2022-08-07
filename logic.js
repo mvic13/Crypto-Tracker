@@ -10,8 +10,8 @@ var info = document.getElementById("timeinterval")
 var apiKey = "6LT2XMVTOVBKRMI4"
 button.addEventListener('click', (event) => {
   event.preventDefault()
-  var input = document.getElementById("companies")
-  var symbol = input.value
+  var input = document.getElementById("search")
+  var symbol = input.value.trim()
   console.log(symbol)
 
   fetch("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=" + symbol + "&interval=60min&apikey=6LT2XMVTOVBKRMI4")
